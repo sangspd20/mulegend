@@ -1,0 +1,264 @@
+@font-face {
+	font-family: 'UTMCopperplate';
+	src: url('../fonts/copperplate.ttf');
+}
+body {
+    font-size: 14px;
+    line-height: 1.7;
+    font-family: 'Open Sans', sans-serif;
+    background: url('../images/bg_body.png') no-repeat top center;
+    background-size: cover;
+    background-position-y: -200px;
+    height: 100vh;
+    overflow-y: scroll !important;
+}
+@media (min-width: 1200px) {
+    body {
+        overflow: hidden;
+    }
+}
+@media (max-width: 767px) {
+    body {
+        background-position-y: unset;
+    }
+}
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1440px;
+    }
+}
+
+header{
+   position:fixed;
+   top: 0;
+   width: 100%;
+   z-index: 100;
+}
+header .logo-group{
+    padding-left: 50px;
+}
+
+header .logo-group a img {
+    height: 90px;
+    padding: 10px 0; 
+}
+header .menubar {
+    display: flex;
+}
+header .menubar #narbarMainMenu ul li.nav-item .nav-link {
+    line-height: 50px;
+    position: relative;
+    font-size: 15px;
+    font-weight: 600;
+    font-family: 'UTMCopperplate';
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+    padding: 0 20px;
+}
+header .menubar #narbarMainMenu ul li.nav-item .nav-link.main, 
+header .menubar #narbarMainMenu ul li.nav-item .nav-link:hover {
+    background: url('../images/bg_title.png') no-repeat center center;
+    background-size: contain;
+}
+header .menubar .navbar-dark .navbar-toggler {
+    border-color: rgba(255,255,255,.5);
+}
+.main {
+    text-align: center;
+    overflow: hidden;
+    /* height: calc(100vh - 120px); */
+    height: 100%;
+}
+.main .container {
+    position: relative;
+    height: 100%;
+}
+.main .bg_main {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('../images/back2.png') no-repeat top center;
+    background-size: contain;
+    z-index: 1;
+    left: 0;
+    top: 10px;
+    animation: lenxuong 1.5s linear infinite;
+    -webkit-animation: lenxuong 1.5s linear infinite;
+}
+.main .logo_title {
+    display: block;
+    position: relative;
+    z-index: 2;
+}
+.main .logo_title a {
+    display: block;
+}
+.main .logo_title img {
+    height: 200px;
+}
+.main .logo_title .sparks {
+    background-repeat: no-repeat;
+    background-position: left 0px bottom 0px;
+    position: absolute;
+}
+.main .logo_title .sparks-1 {
+    background-image: url(../images/sparks-1.png);
+    width: 117px;
+    height: 136px;
+    right: 377px;
+    bottom: 0px;
+    background-position: left 0px bottom 0px;
+    animation-name: sparks-1;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+.main .logo_title .sparks-2 {
+    background-image: url(../images/sparks-2.png);
+    width: 219px;
+    height: 176px;
+    right: 350px;
+    bottom: 4px;
+    background-position: left 0px bottom 0px;
+    animation-name: sparks-2;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-delay: 0.5s;
+  }
+.main .logo_title .sparks-3 {
+    background-image: url(../images/sparks-3.png);
+    width: 438px;
+    height: 281px;
+    right: 277px;
+    margin-bottom: -120px;
+    background-position: left 0px bottom 0px;
+    animation-name: sparks-3;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-delay: 1s;
+}
+
+/* Main content */
+.main .box_content {
+    position: relative;
+    z-index: 2;
+    margin-top: 160px;
+    background: url('../images/back_dragon.png') no-repeat top center;
+    background-size: 660px;
+}
+.main .box_content .season_title {margin: 0;}
+.main .box_content .season_title img {
+    height: 55px;
+}
+.main .box_content .server {margin: 0;}
+.main .box_content .server a {
+    display: block;
+}
+.main .box_content .server a img {
+    height: 60px;
+    -webkit-animation: zoomEffect 1s linear infinite;
+    animation: zoomEffect 1s linear infinite;
+}
+.main .box_content .opening {margin: 100px 0 0;}
+
+@media (max-width: 767px) {
+    .main {
+        height: unset;
+    }
+    .main .bg_main {
+        /* background-size: cover; */
+        background-size: 760px;
+        top: 155px;
+    }
+    .main .box_content {
+        background-size: contain;
+        background-position-y: 50px;
+    }
+    .main .box_content .season_title img ,
+    .main .box_content .opening img {
+        max-width: 100%;
+    }
+}
+
+/* Hiệu ứng chân site */
+.main .box_content .sparks { position: absolute; width: 50%; left: 50%; bottom: 30px; z-index: 3; }
+.main .box_content .sparks > div { position: absolute; }
+.main .box_content .sparks .spark_1 { background: url(../images/spark_1.png) no-repeat; width: 764px; height: 313px; right: 0; bottom: -320px; -webkit-transform: scale(0.6); transform: scale(0.6); -webkit-animation: spark-1 4s linear infinite; animation: spark-1 4s linear infinite; -webkit-animation-delay: 1s; animation-delay: 1s; }
+.main .box_content .sparks .spark_2 { background: url(../images/spark_2.png) no-repeat; width: 179px; height: 335px; right: 230px; bottom: -320px; -webkit-transform: scale(0.6); transform: scale(0.6); -webkit-animation: spark-1 4s linear infinite; animation: spark-1 4s linear infinite; -webkit-animation-delay: 2s; animation-delay: 2s; }
+.main .box_content .sparks .spark_3 { background: url(../images/spark_3.png) no-repeat; width: 128px; height: 165px; right: 280px; bottom: -140px; -webkit-transform: scale(0.6); transform: scale(0.6); -webkit-animation: spark-3 4s linear infinite; animation: spark-3 4s linear infinite; -webkit-animation-delay: 2s; animation-delay: 2s; }
+.main .box_content .sparks .spark-big { background: url(../images/spark_4.png) no-repeat; width: 794px; height: 176px; right: 0; bottom: -180px; -webkit-transform: scale(0.6); transform: scale(0.6); -webkit-animation: spark-5 4s linear infinite; animation: spark-5 4s linear infinite; }
+.main .box_content .sparks .spark_5 { -webkit-animation-delay: 2s; animation-delay: 2s; right: 40px; }
+
+.main .box_content .sparks_1 {left: 0;}
+.main .box_content .sparks_1 .spark_1 { background: url(../images/spark_1.png) no-repeat; -webkit-animation-delay: 2s; animation-delay: 2s; }
+.main .box_content .sparks_1 .spark_2 { background: url(../images/spark_2.png) no-repeat; -webkit-animation-delay: 3s; animation-delay: 3s; }
+.main .box_content .sparks_1 .spark_3 { background: url(../images/spark_3.png) no-repeat; -webkit-animation-delay: 3s; animation-delay: 3s; }
+.main .box_content .sparks_1 .spark-big { background: url(../images/spark_4.png) no-repeat; }
+.main .box_content .sparks_1 .spark_5 { -webkit-animation-delay: 3s; animation-delay: 3s; }
+
+.main .box_content .sparks_2 { left: unset; right: 0; }
+
+.events {
+    width: 100%;
+    position: relative;
+    overflow-x: hidden;
+  }
+  
+  .events .event-cont {
+    width: 1920px;
+    position: relative;
+    left: -webkit-calc(50% - 960px);
+    left: -moz-calc(50% - 960px);
+    left: calc(50% - 960px);
+  }
+
+  #button {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    transition: background-color .3s, 
+      opacity .5s, visibility .5s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+  }
+
+  #button:hover {
+    cursor: pointer;
+    background-color: #333;
+    text-decoration: none;
+  }
+  #button:active {
+    background-color: #555;
+  }
+  #button.show {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  #button img{
+    transition: background-color .3s, 
+    opacity .5s, visibility .5s;
+    opacity: 0;
+    visibility: hidden;
+    width:50px;
+  }
+
+  #button img:hover{
+    transform: scale(1.1)
+  }
+
+  #button img.show {
+    opacity: 1;
+    visibility: visible;
+  }
+
+

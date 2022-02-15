@@ -145,7 +145,6 @@ header .menubar .navbar-dark .navbar-toggler {
 .main .box_content {
     position: relative;
     z-index: 2;
-    margin-top: 160px;
     background: url('../images/back_dragon.png') no-repeat top center;
     background-size: 660px;
 }
@@ -181,6 +180,12 @@ header .menubar .navbar-dark .navbar-toggler {
     .main .box_content .opening img {
         max-width: 100%;
     }
+}
+
+@media (min-width: 1400px) {
+  .main .box_content {
+    margin-top:160px;
+  }
 }
 
 /* Hiệu ứng chân site */
@@ -282,6 +287,7 @@ header .menubar .navbar-dark .navbar-toggler {
     position:relative;
     width:calc(100% - 1em);
     padding:1em 0 1em 1em;
+    background: url(../images/bg_title.png) center center / contain no-repeat;
   }
   aside nav ul a li:hover {
       transform:scale(1.1);

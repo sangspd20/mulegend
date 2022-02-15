@@ -1,11 +1,11 @@
 @font-face {
 	font-family: 'UTMCopperplate';
-	src: url('../fonts/copperplate.ttf');
+	src: url('../fonts/UTM_TRAJAN_PRO_BOLD.ttf');
 }
 body {
     font-size: 14px;
     line-height: 1.7;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'UTMCopperplate', sans-serif;
     background: url('../images/bg_body.png') no-repeat top center;
     background-size: cover;
     background-position-y: -200px;
@@ -267,7 +267,7 @@ header .menubar .navbar-dark .navbar-toggler {
   }
 
   aside{
-    width: 200px;
+    width: 220px;
     height: 100vh;
     position: fixed;
     height: 100%;
@@ -286,9 +286,16 @@ header .menubar .navbar-dark .navbar-toggler {
     color: #fff;
     position:relative;
     width:calc(100% - 1em);
-    padding:1em 0 1em 1em;
-    background: url(../images/bg_title.png) center center / contain no-repeat;
+    padding:1em;
+    width: 100%;
+    text-align: center;
   }
+
+
+  aside nav ul a li.active {
+    background: url(../images/frame.png) center center / contain no-repeat;
+  }
+
   aside nav ul a li:hover {
       transform:scale(1.1);
       text-decoration: none;
@@ -298,6 +305,7 @@ header .menubar .navbar-dark .navbar-toggler {
     text-decoration: none;
   }
  
+  
   aside nav ul a{
     color: inherit;
     text-decoration: none;

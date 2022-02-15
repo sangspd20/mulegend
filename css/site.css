@@ -272,7 +272,7 @@ header .menubar .navbar-dark .navbar-toggler {
     position: fixed;
     height: 100%;
     z-index: 50;
-    padding-top: 100px;
+    padding-top: 300px;
     background: linear-gradient(to right, #0b0a0d 0%, rgba(11, 10, 13, 0.51) 83%, rgba(11, 10, 13, 0.5) 84%, rgba(11, 10, 13, 0) 100%);
   }
   aside nav{

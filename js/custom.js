@@ -15,3 +15,14 @@ btn.on("click", function (e) {
   e.preventDefault();
   $("html, body").animate({ scrollTop: 0 }, "300");
 });
+
+$(".scroll-item").click(function () {
+  var scrollList = $(".scroll-list");
+  var liList = scrollList.find(".scroll-item");
+
+  liList.each(function (index, el) {
+    $(el).removeClass("active");
+  });
+
+  $(this).addClass("active");
+});
